@@ -1,0 +1,521 @@
+
+:root{
+    --green: #6b8d62;
+    --black: #1b1b1b;
+    --greenlight: #b0d39f;
+    --white: #F7F6DC;
+    --title: 35px;
+    --text: 19px;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+
+
+
+/***************** BISELES *****************/
+
+.bisel-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+}
+.bisel-arriba{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-color: white transparent transparent transparent;
+    border-style: solid;
+}
+
+
+
+
+
+/***************** MENU *****************/
+
+#inicio{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo{
+    margin-left: 20px;
+}
+
+.menu .logo h1 a{
+    text-decoration: none;
+    font-size: var(--title);
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .lista-content{
+    margin-right: 20px;
+}
+
+.menu .lista-content ul{
+    display: flex;
+    
+}
+
+.menu .lista-content ul li{
+    list-style: none;
+}   
+
+.menu .lista-content ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    font-size: 17px;
+    border-radius: 17px;
+    transition: 0.3s;
+}
+
+.menu .lista-content ul li a:hover{
+    background-color: var(--green);
+    color: white;
+}
+
+.menu .lista-content ul li a.active{
+    background-color: var(--green);
+    color: white;
+}
+
+
+
+
+
+/********************************* imagen header *****************/
+
+.img-header{
+    position: relative;  /* poner relative siempre que vayamos a modificar el contenido de dentro */
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/images/inicio3.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.img-header .bienvenido{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* esto es para crear una capa para orcurecer un poco el backgroun */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .bienvenido h1{
+    font-size: 50px;
+    color: white;
+    font-weight: 200;
+}
+
+.img-header .bienvenido p{
+    font-size: 20px;
+    color: white;
+    font-weight: 20px;
+}
+
+.img-header .bienvenido button{
+    width: 120px;
+    height: 30px;
+    color: white;
+    background-color: var(--greenlight);
+    font-weight: 15px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.img-header .bienvenido > button:hover{
+    background-color: var(--green);
+}
+
+
+
+
+
+/***************** NOSOTROS *****************/
+
+.nosotros{
+    margin-top: 120px;
+    width: 100%;
+}
+
+.nosotros .n-container{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nosotros .n-container h2{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--black);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nosotros .n-container p{
+    font-size: 1rem;
+    color: var(--black);
+    text-align: center;
+    margin: 10px 0;
+    line-height: 35px;
+
+}
+
+.nosotros .n-galery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+
+.nosotros .n-galery .n-img{
+    width: 25%;
+    margin: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nosotros .n-container .n-button{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--green);
+    color: #FFFFFF;
+    border-style: none;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 10px auto;
+}
+
+.nosotros .n-container > button:hover{
+    background-color: var(--greenlight);
+    color: var(--green);
+}
+
+
+
+
+/***************** PROYECTOS *****************/
+
+.proyectos{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/images/markus-spiske-iar-afB0QQw-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 100px;
+}
+
+.proyectos .gradient-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.proyectos .eje-z{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.proyectos .p-container{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.proyectos .p-container .p-title{
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+    margin:auto;
+}
+
+.proyectos .p-container .p-title h2{
+    font-size: 2rem;
+    color: white;
+}
+
+.proyectos .p-container .p-title hr{
+    background-color: white;
+    width: 70%;
+    height: 2px;
+    margin: 10px auto;
+}
+
+.proyectos .p-container .p-galery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+.proyectos .p-container .p-galery img{
+    width: 700px;
+    margin: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+
+
+
+/***************** TESTIMONIOS *****************/
+
+.testimonios{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.testimonios .t-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.testimonios .t-title h2{
+    font-size: 3rem;
+    color: #1b1b1b;
+}
+
+.testimonios .t-title hr{
+    margin: auto;
+    width: 30%;
+    height: 2px;
+    color: #1b1b1b;
+}
+
+.testimonios .t-container{
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.testimonios .t-container .test-card{
+    width: 45%;
+    margin: 20px;
+    padding: 30px;
+    box-shadow: rgb(175, 175, 175) -5px 5px 10px;
+    border-radius: 30px;
+    transition: 1.0s;
+}
+
+.testimonios .t-container .test-card .card-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.testimonios .t-container .test-card .card-img img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.testimonios .t-container .test-card .card-text{
+    width: auto;
+    color: #1b1b1b;
+    /* transition: 0,1; */
+}
+
+.testimonios .t-container .test-card .card-text h3{
+    width: auto;
+    text-align: center;
+    color: #6b8d62;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.testimonios .t-container .test-card .card-text p{
+    font-size: 17px;
+    text-align: center;
+}
+
+/*********** TRANSITION **********/
+
+/* .testimonios .t-container .test-card:hover{
+    box-shadow: rgb(212, 212, 212) -5px 5px 40px inset;
+    cursor: pointer;
+} */
+
+/* *******FOOTER******** */
+
+.contacto{
+    width: 100%;
+    margin-top: 200px;
+    text-align: center;
+    
+}
+
+.contacto .c-title{
+    border: 1px solid #6b8d62;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    margin:auto;
+}
+ 
+.contacto .c-title h2{
+    font-size: 2rem;
+    color: #6b8d62;
+}
+
+.contacto .c-title hr{
+    background-color: #6b8d62;
+    width: 70%;
+    height: 2px;
+    margin: 10px auto;
+}
+
+.contacto .c-container{
+    width: 50%;
+    height: 600px;
+    margin: 60px auto;
+    background-color: #a2b99c;
+    border-radius: 50px;
+}
+
+.contacto .c-container .form{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin: auto;
+}
+
+.contacto-form-component label{
+    font-size: 20px;
+    margin: 5px 20px;
+    color: #FFFFFF;
+}
+
+.contacto-form-component input{
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.contacto-form-component textarea{
+    width: 80%;
+    height: 200px;
+    margin: 5px 0 20px 0;
+    border-radius: 30px;
+    border: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+
+}
+
+.contacto-form-component button{
+    background-color: #6b8d62;
+    color: #FFFFFF;
+    width: 100px;
+    height: 35px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 15px;
+}
+
+.contacto-form-component button:hover{
+    background-color: #42483f;
+}
+
+.contacto-form-component p{
+    font-size: 17px;
+    margin-top: 50px;
+    color: #FFFFFF;
+}
+
+
+
+
+.contacto .footer{
+    width: 100%;
+    height: 120px;
+    background-color: #0f0f0f;
+    color: #FFFFFF;
+    margin-top: 100px;
+}
+
+.contacto .footer p{
+    padding: 50px ;
+}
